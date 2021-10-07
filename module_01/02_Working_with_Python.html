@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -74,6 +74,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/comp-mech-logo.svg" class="logo" alt="logo">
       
@@ -292,6 +296,20 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../how-to/polyfit.html">
      Creating a quadratic fit on random data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../how-to/for-loops.html">
+     How to use a
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loop?
+     <em>
+      in Python
+     </em>
     </a>
    </li>
    <li class="toctree-l2">
@@ -1034,7 +1052,7 @@ you can do more computations, like add or multiply them. For example:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1797/2664324349.py:1: RuntimeWarning: invalid value encountered in true_divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1762/2664324349.py:1: RuntimeWarning: invalid value encountered in true_divide
   x_array / y_array
 </pre></div>
 </div>
@@ -1396,8 +1414,8 @@ with no numbers repeated.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[26, 52, 54, 45, 18, 36, 21, 94, 35, 64]
-[62, 67, 2, 93, 55, 99, 94, 56, 15, 14]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[47, 72, 6, 81, 11, 3, 4, 78, 73, 26]
+[20, 7, 90, 47, 72, 54, 79, 95, 80, 86]
 </pre></div>
 </div>
 </div>
@@ -1417,8 +1435,8 @@ takes to execute all the code in that cell.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 20 µs, sys: 5 µs, total: 25 µs
-Wall time: 27.7 µs
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 25 µs, sys: 5 µs, total: 30 µs
+Wall time: 31.9 µs
 </pre></div>
 </div>
 </div>
@@ -1430,7 +1448,7 @@ Wall time: 27.7 µs
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[88, 119, 56, 138, 73, 135, 115, 150, 50, 78]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[67, 79, 96, 128, 83, 57, 83, 173, 153, 112]
 </pre></div>
 </div>
 </div>
@@ -1464,8 +1482,8 @@ that the arrays and the lists are of the same length and type
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[63 98 58 72 31 76 54 57 50 34]
-[12 16 51 11 34 55 78 35  9 89]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[77 67  9 17 29 27 18 16 37 70]
+[82 45 29 47 91 79  6 92 51 40]
 </pre></div>
 </div>
 </div>
@@ -1479,8 +1497,8 @@ that the arrays and the lists are of the same length and type
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 8 µs, sys: 2 µs, total: 10 µs
-Wall time: 12.9 µs
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 15 µs, sys: 3 µs, total: 18 µs
+Wall time: 21.5 µs
 </pre></div>
 </div>
 </div>
@@ -1564,7 +1582,7 @@ in the x-axis, you need to import the module <code class="docutils literal notra
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc665bbdbe0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f91cc96e340&gt;
 </pre></div>
 </div>
 <img alt="../_images/02_Working_with_Python_104_1.png" src="../_images/02_Working_with_Python_104_1.png" />
@@ -1714,7 +1732,7 @@ of the two indices from 0 to 9 e.g. A_99[3,2]=6 and A_99[4,4]=16.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
